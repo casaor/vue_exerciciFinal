@@ -1,0 +1,22 @@
+body {
+  background-color: #85dcb8;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+.centered .card {
+  max-width: 18rem;
+  border: none;
+}
+.centered .card-header {
+  background-color: #e27d60;
+  color: white;
+  text-align: center;
+}
+.centered .card-body {
+  background-color: #e8a87c;
+}
+
+/*# sourceMappingURL=home.css.map */

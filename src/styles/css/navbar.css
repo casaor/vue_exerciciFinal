@@ -1,0 +1,20 @@
+.navbar {
+  width: 100% !important;
+  background-color: #41b3a3;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navbar-brand img {
+  width: 30px;
+  height: 30px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,23 @@
+body{
+    background-color: #85dcb8;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    .card {
+        max-width: 18rem;
+        border: none;
+    }
+    
+    .card-header {
+        background-color: #e27d60;
+        color:white;
+        text-align: center;
+    }
+    
+    .card-body {
+        background-color: #e8a87c;
+    }
+}
+
