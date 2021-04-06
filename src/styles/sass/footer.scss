@@ -1,10 +1,13 @@
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 50px;
     width: 100%;
-    line-height: 50px;
     background-color: #bff3ec;
-    display: flex;
-    justify-content: space-between;
+
+    .text-footer {
+        display: flex;
+        justify-content: space-between;
+        color: #41b3a3;
+    }
 }

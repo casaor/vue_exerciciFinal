@@ -1,12 +1,12 @@
-import Navbar from './../views/Navbar.vue'
-import Footer from './../views/Footer.vue'
+import appNavbar from './../views/appNavbar.vue'
+import appFooter from './../views/appFooter.vue'
 
 
 export default {
   name: 'App',
 
 components: {
-    Navbar,
-    Footer
+    appNavbar,
+    appFooter,
   }
 }

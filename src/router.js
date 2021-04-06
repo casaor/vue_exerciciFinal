@@ -5,7 +5,7 @@ import Pictures from './views/Pictures.vue';
 
 const paths = [
     { 
-        path: '/home', 
+        path: '/', 
         component: Home 
     },
     { 
@@ -15,7 +15,12 @@ const paths = [
     { 
         path: '/pictures', 
         component: Pictures 
-    }
+    },
+    { 
+        path: '/users/:id', 
+        name: 'users',
+        component: Users
+    },   
 ];
 
 const router = new VueRouter (

@@ -1,4 +1,4 @@
-# vue_vuex2
+# slot
 
 ## Project setup
 ```

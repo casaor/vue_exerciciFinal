@@ -6,8 +6,8 @@ export default {
         }
     },
     methods:{
-        ConsultarPhoto(){
-            this.$router.push('../photoInfo')
+        consultarPhoto(photo){
+            this.emit('consultar-photo', photo)
         }
     }
 }

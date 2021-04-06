@@ -2,12 +2,11 @@
 
   <div id="app">
          
-      <navbar></navbar>
-
-      <footer></footer>
+      <appNavbar></appNavbar>
       
       <router-view></router-view>
-  
+
+      <appFooter></appFooter>
 
   </div>
 

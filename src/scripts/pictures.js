@@ -1,13 +1,10 @@
 import PicturesList from './../components/PicturesList.vue'
+import Back from './../components/Back.vue'
 
 export default {
     components:
     {
         PicturesList,
+        Back,
     },
-    methods:{
-        tornarHome(){
-            this.$router.push('../home')
-        }
-    }
 }

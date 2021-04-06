@@ -1,5 +1,6 @@
 import Vuex from 'vuex'
 import UsersList from './../components/UsersList.vue'
+import Back from './../components/Back.vue'
 
 export default {
     computed:
@@ -11,10 +12,6 @@ export default {
     components:
     {
         UsersList,
-    },
-    methods:{
-        tornarHome(){
-            this.$router.push('../home')
-        }
+        Back,
     }
 }

@@ -7,7 +7,7 @@ export default {
     },
     methods:{
         ConsultarUser(){
-            this.$router.push('../userInfo')
+            this.$emit("userConsultado", this.user)
         }
     }
 }
