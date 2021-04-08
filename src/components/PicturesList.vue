@@ -1,6 +1,6 @@
 <template>
     <div class="card-columns">
-        <pictureItem v-for="photo of photos" :photo="photo" v-bind:key="photo" :item="item"></pictureItem>  
+        <pictureItem v-for="photo of photos" :photo="photo" v-bind:key="photo"></pictureItem>  
     </div>
 </template>
 

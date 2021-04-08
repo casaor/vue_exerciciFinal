@@ -1,7 +1,9 @@
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
 import Home from './views/Home.vue';
 import Users from './views/Users.vue';
 import Pictures from './views/Pictures.vue';
+import UserInfo from './components/UserInfo.vue';
+
 
 const paths = [
     { 
@@ -17,9 +19,9 @@ const paths = [
         component: Pictures 
     },
     { 
-        path: '/users/:id', 
-        name: 'users',
-        component: Users
+        path: '/users/:Pid', 
+        name: 'users1',
+        component: UserInfo,
     },   
 ];
 

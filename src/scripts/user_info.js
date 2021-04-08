@@ -1,8 +1,8 @@
-export default {
-    props: {
-        user:{
-            type:Object,
-            required:true
-        }
-    }
-}
+// export default {
+//     props: {
+//         user: {
+//             type:Object,
+//             required:true
+//         }
+//     }
+// }

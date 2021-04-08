@@ -1,4 +1,8 @@
 export default {
+    data ()
+    {
+        return{}
+    },
     props: {
         user: {
             type:Object,
@@ -6,8 +10,17 @@ export default {
         }
     },
     methods:{
-        ConsultarUser(){
-            this.$emit("userConsultado", this.user)
+        UserInfo(userId){
+            this.$router.push(
+                {
+                    name: 'users1',
+                    params:
+                    {
+                        Pid: userId,
+                        users: this.user
+                    }
+                }
+            );
         }
-    }
+    },
 }

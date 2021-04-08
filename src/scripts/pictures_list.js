@@ -1,19 +1,14 @@
-import axios from 'axios';
 import PictureItem from './../components/PictureItem'
 
 export default {
-    data(){
-        return {
-            photos: []
+
+    computed: {
+        photos () {
+            return  this.$store.state.photos
         }
     },
-    mounted() {
-        let vue = this;
-        axios.get('http://jsonplaceholder.typicode.com/photos')
-        .then( function( response ) {
-            console.log(response.data)
-            vue.photos = response.data;
-        })
+    mounted () {
+        this.$store.dispatch ('loadPhotos')
     },
     components:
     {
