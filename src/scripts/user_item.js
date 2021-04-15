@@ -21,6 +21,7 @@ export default {
                     }
                 }
             );
+            this.user.consulted = this.user.consulted + 1;
         }
     },
     filters:

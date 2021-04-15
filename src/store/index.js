@@ -18,13 +18,19 @@ export default new Vuex.Store(
     mutations: {
       setSearch (state,search){
         state.filters.search = search
-        console.log(state.filters.search)
+        // console.log(state.filters.search)
       },
       setUsers (state,users) {
         state.users = users
+        users.forEach(function (item) {
+          item.consulted = 0;
+        })
       },
       setPhotos (state,photos) {
         state.photos = photos
+        photos.forEach(function (item) {
+          item.consulted = 0;
+        })
       }
     },
     actions: {
@@ -55,6 +61,16 @@ export default new Vuex.Store(
           users = usersRefresh
           return users 
        }
+      },
+      ConsultedUsers (state) {
+        let users = state.users()
+        let uconsulted = []
+        for (const user of users){
+          if (user.consulted == 0){
+              uconsulted.push(user)
+          }
+        }
+          return uconsulted 
       }
     }
   });

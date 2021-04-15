@@ -1,28 +1,12 @@
-// export default {
+import Vuex from 'vuex'
 
-//     data ()
-//     {
-//         return {
-//             usuarios: [
-//                 {nombre: '', consultado:0}
-//             ],
-//             fotos: [
-//                 {titulo: '', consultado:0}
-//             ]
-//         }
-//     },
+export default {
 
-//     methods: {
-//         userConsulted() {
-//             this.usuarios.push({
-//                 nombre: 2, consultado:1
-//             });
-//         },
-//         photoConsulted() {
-//             this.fotos.push({
-//                 titulo: 3, consultado:1
-//             });
-//         },
-//     }
+    computed:
+    {
+        ...Vuex.mapGetters({
+            uconsulted: 'ConsultedUsers'
+        })
+    },
 
-// }
+}

@@ -5,19 +5,19 @@
         <h1 class="mb-3">Home</h1>
     </div> 
 
-<!-- <div class="centered mt-5">
+<div class="centered mt-5">
 
   <div class="card mr-3">
       <div class="card-header">Users consulted</div>
       <div class="card-body">
         <ul>
-          <li v-for="usuario of usuarios" :key="usuario">
-            {{usuario.name}} - {{usuario.consulted}}
+          <li v-for="item of uconsulted" :uconsulted="uconsulted" :key="item">
+            {{uconsulted.name}} - {{uconsulted.consulted}}
           </li>
         </ul>
       </div>
   </div>
-  <div class="card">
+  <!-- <div class="card">
       <div class="card-header">Pictures consulted</div>
       <div class="card-body">
         <ul>
@@ -26,9 +26,9 @@
           </li>
         </ul>
       </div>
-  </div>
+  </div> -->
 
-</div> -->
+</div>
 
 </div>
 
