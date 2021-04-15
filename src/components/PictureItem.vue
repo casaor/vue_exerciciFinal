@@ -1,11 +1,9 @@
 <template>
 
-    <div class="card m-2 p-1">
+    <div class="card m-2 p-1 text-center">
+        <img class="card-img-top" :src ="photo.thumbnailUrl">
         <div class="card-body">
-            <h5 class="card-title mb-4">{{ photo.title }}</h5>
-            <router-link :to="{ name: 'pictures', params: {id: photo.albumID} }" >
-                <button type="button" class="btn btn-outline-info my-2 my-sm-0" @click="consultarPhoto(photo)">View album</button>
-            </router-link>
+                <button class="btn btn-outline-info my-2 my-sm-0" @click="PhotoInfo(photo.albumId)" :photo="photo">View photo</button>
         </div>
     </div>
 
@@ -15,6 +13,6 @@
 
 <style >
     .card {
-    height: 10rem !important;
+    width: 14rem !important
     }
 </style>

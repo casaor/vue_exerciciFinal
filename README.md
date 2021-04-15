@@ -1,4 +1,4 @@
-# slot
+# projecte
 
 ## Project setup
 ```

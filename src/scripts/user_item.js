@@ -23,4 +23,12 @@ export default {
             );
         }
     },
+    filters:
+    {
+        UpperCase(value)
+        {
+            if(!value) return '';
+            return value.toString().toUpperCase();
+        }
+    }
 }

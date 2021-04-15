@@ -1,8 +1,8 @@
-// export default {
-//     props: {
-//         user: {
-//             type:Object,
-//             required:true
-//         }
-//     }
-// }
+import Back from './../components/Back.vue'
+
+export default {
+    components:
+    {
+        Back
+    }
+}

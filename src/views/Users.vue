@@ -4,7 +4,9 @@
             <h1 class="mb-3">Users</h1>
             <back></back>
         </div> 
-        <usersList></usersList>
+        <div class="d-flex justify-content-center">
+            <usersList></usersList>
+        </div>
 
     </div>
 

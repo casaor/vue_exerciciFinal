@@ -1,7 +1,9 @@
 <template>
+
     <div class="card-columns">
         <userItem v-for="user of users" :user="user" :key="user.id"></userItem>  
     </div>
+    
 </template>
 
 <script type="text/javascript" src="./../scripts/users_list.js"></script>

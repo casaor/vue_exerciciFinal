@@ -4,9 +4,13 @@
          
       <appNavbar></appNavbar>
       
-      <router-view></router-view>
+      <fade>
+      
+        <router-view></router-view>
 
-      <!-- <appFooter></appFooter> -->
+      </fade>
+
+      <appFooter></appFooter>
 
   </div>
 

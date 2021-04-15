@@ -18,6 +18,7 @@ export default new Vuex.Store(
     mutations: {
       setSearch (state,search){
         state.filters.search = search
+        console.log(state.filters.search)
       },
       setUsers (state,users) {
         state.users = users
@@ -29,23 +30,31 @@ export default new Vuex.Store(
     actions: {
 
       loadUsers ({ commit }){
-        // if (state.filters.search.length > 2){
-        //     axios.get('http://jsonplaceholder.typicode.com/users')
-        //     .then( response => {
-        //     commit('setUsers', response.data) 
-        //     })
-        // }else{
           axios.get('http://jsonplaceholder.typicode.com/users')
             .then( response => {
             commit('setUsers', response.data) 
             })
-        // }
       },
       loadPhotos ({ commit }){
           axios.get('http://jsonplaceholder.typicode.com/photos')
             .then( response => {
             commit('setPhotos', response.data) 
             })
+      }
+    },
+    getters: {
+      FilterUsers (state){
+        let users = state.users()
+        let usersRefresh = []
+        if (state.filters.search.length > 2){
+          for (const user of users){
+            if (user.name.toLocaleLowerCase().includes(state.filters.search)){
+                usersRefresh.push(user)
+            }
+          }
+          users = usersRefresh
+          return users 
+       }
       }
     }
   });

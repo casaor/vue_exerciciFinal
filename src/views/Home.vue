@@ -5,30 +5,30 @@
         <h1 class="mb-3">Home</h1>
     </div> 
 
-<div class="centered mt-5">
+<!-- <div class="centered mt-5">
 
   <div class="card mr-3">
       <div class="card-header">Users consulted</div>
       <div class="card-body">
-        <!-- <ul>
-          <li v-for= "user of users">
-            {{user.name}} - {{consulted}}
+        <ul>
+          <li v-for="usuario of usuarios" :key="usuario">
+            {{usuario.name}} - {{usuario.consulted}}
           </li>
-        </ul> -->
+        </ul>
       </div>
   </div>
   <div class="card">
       <div class="card-header">Pictures consulted</div>
       <div class="card-body">
-        <!-- <ul>
-          <li v-for= "photo of photos">
-            {{photo.title}} - {{consulted}}
+        <ul>
+          <li v-for="foto of fotos" :key="foto">
+            {{foto.title}} - {{foto.consulted}}
           </li>
-        </ul> -->
+        </ul>
       </div>
   </div>
 
-</div>
+</div> -->
 
 </div>
 

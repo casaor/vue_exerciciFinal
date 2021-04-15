@@ -5,7 +5,9 @@
             <h1 class="mb-3">Pictures</h1>
             <back></back>
         </div> 
-        <picturesList></picturesList>
+        <div class="d-flex justify-content-center">
+            <picturesList></picturesList>
+        </div>
 
     </div>
 

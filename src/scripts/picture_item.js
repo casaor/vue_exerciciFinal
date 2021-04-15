@@ -6,8 +6,17 @@ export default {
         }
     },
     methods:{
-        consultarPhoto(photo){
-            this.emit('consultar-photo', photo)
+        PhotoInfo(albumId){
+            this.$router.push(
+                {
+                    name: 'photo',
+                    params:
+                    {
+                        Qid: albumId,
+                        photos: this.photo
+                    }
+                }
+            );
         }
-    }
+    },
 }

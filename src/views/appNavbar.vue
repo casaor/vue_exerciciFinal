@@ -16,8 +16,7 @@
               </li>
             </ul>
             <form class="form-inline col-sm my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" v-model="SearchForm">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+              <input class="form-control mr-sm-2 w-50" type="search" placeholder="Users search" v-model="SearchForm">
             </form>
       </nav> 
   </div>
