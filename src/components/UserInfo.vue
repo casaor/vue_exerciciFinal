@@ -4,16 +4,15 @@
                 <h1 class="mb-3">User {{ this.$route.params.Pid }}</h1>
                 <back></back>
         </div> 
-        <div>
-            <div class="card">
+        <div class="info-center">
+            <div class="card info-wide m-4 h-50">
+                <h5 class="card-header">{{ this.$route.params.users.name }}</h5>
                 <div class="card-body">
-                    <h1>UserInfo</h1>
-                    <h5 class="card-title">{{ this.$route.params.users.name }}</h5>
-                    <strong> User id: {{ this.$route.params.users.id }}</strong>
-                    <p>username: {{ this.$route.params.users.username }}</p>
-                    <p>email: {{ this.$route.params.users.email }}</p>
-                    <p>website:{{ this.$route.params.users.website }}</p>
-                    <p>company name: {{ this.$route.params.users.company.name }}</p>
+                    <h5 class="card-title">username: {{ this.$route.params.users.username }}</h5>
+                    <p class="card-text">user id: {{ this.$route.params.users.id }}</p>
+                    <p class="card-text">email: {{ this.$route.params.users.email }}</p>
+                    <p class="card-text">website: {{ this.$route.params.users.website }}</p>
+                    <p class="card-text">company name: {{ this.$route.params.users.company.name }}</p>
                 </div>
             </div>
         </div>
