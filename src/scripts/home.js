@@ -4,9 +4,9 @@ export default {
 
     computed:
     {
-        ...Vuex.mapGetters({
-            uconsulted: 'ConsultedUsers'
-        })
-    },
+        ...Vuex.mapGetters([
+            'ConsultedUsers'
+        ])
+    }
 
 }

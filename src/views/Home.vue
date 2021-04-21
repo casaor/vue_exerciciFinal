@@ -11,8 +11,8 @@
       <div class="card-header">Users consulted</div>
       <div class="card-body">
         <ul>
-          <li v-for="item of uconsulted" :uconsulted="uconsulted" :key="item">
-            {{uconsulted.name}} - {{uconsulted.consulted}}
+          <li v-for="item of ConsultedUsers" :ConsultedUsers="ConsultedUsers" :key="item">
+            {{ConsultedUsers.name}} - {{ConsultedUsers.consulted}}
           </li>
         </ul>
       </div>
