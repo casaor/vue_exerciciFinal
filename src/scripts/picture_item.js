@@ -1,4 +1,8 @@
 export default {
+    data ()
+    {
+        return{}
+    },
     props: {
         photo: {
             type:Object,
@@ -17,6 +21,7 @@ export default {
                     }
                 }
             );
+            this.photo.consulted = this.photo.consulted + 1;
         }
     },
 }

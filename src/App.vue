@@ -4,11 +4,11 @@
          
       <appNavbar></appNavbar>
       
-      <fade>
+      <transition name="scale">
       
         <router-view></router-view>
 
-      </fade>
+      </transition>
 
       <appFooter></appFooter>
 

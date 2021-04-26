@@ -50,7 +50,7 @@ export default new Vuex.Store(
     },
     getters: {
       FilterUsers (state){
-        let users = state.users()
+        let users = state.users;
         let usersRefresh = []
         if (state.filters.search.length > 2){
           for (const user of users){
@@ -63,14 +63,24 @@ export default new Vuex.Store(
        }
       },
       ConsultedUsers (state) {
-        let users = state.users()
+        let users = state.users;
         let uconsulted = []
         for (const user of users){
-          if (user.consulted == 0){
+          if (user.consulted > 0){
               uconsulted.push(user)
           }
         }
           return uconsulted 
+      },
+      ConsultedPhotos (state) {
+        let photos = state.photos;
+        let pconsulted = []
+        for (const photo of photos){
+          if (photo.consulted > 0){
+              pconsulted.push(photo)
+          }
+        }
+          return pconsulted 
       }
     }
   });

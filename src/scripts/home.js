@@ -5,7 +5,8 @@ export default {
     computed:
     {
         ...Vuex.mapGetters([
-            'ConsultedUsers'
+            'ConsultedUsers',
+            'ConsultedPhotos'
         ])
     }
 

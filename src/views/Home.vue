@@ -11,27 +11,29 @@
       <div class="card-header">Users consulted</div>
       <div class="card-body">
         <ul>
-          <li v-for="item of ConsultedUsers" :ConsultedUsers="ConsultedUsers" :key="item">
-            {{ConsultedUsers.name}} - {{ConsultedUsers.consulted}}
+          <li v-for="item of ConsultedUsers" :ConsultedUsers="item" :key="item.id">
+            {{item.name}}: {{item.consulted}}
           </li>
         </ul>
       </div>
   </div>
-  <!-- <div class="card">
+  <div class="card mr-3">
       <div class="card-header">Pictures consulted</div>
       <div class="card-body">
         <ul>
-          <li v-for="foto of fotos" :key="foto">
-            {{foto.title}} - {{foto.consulted}}
+          <li v-for="photo of ConsultedPhotos" :key="photo.albumId">
+            {{photo.title}} - {{photo.consulted}}
           </li>
         </ul>
       </div>
-  </div> -->
+  </div>
 
 </div>
 
 </div>
 
 </template>
+
+<script type="text/javascript" src="./../scripts/home.js"></script>
 
 <style src="./../styles/css/home.css"></style>

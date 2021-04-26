@@ -19,4 +19,10 @@ body {
   background-color: #e8a87c;
 }
 
+ul {
+  list-style-type: none !important;
+  padding: 0;
+  text-align: center;
+}
+
 /*# sourceMappingURL=home.css.map */
