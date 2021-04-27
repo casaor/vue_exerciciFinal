@@ -1,11 +1,12 @@
+import Vuex from 'vuex'
 import UserItem from './../components/UserItem'
 
 export default {
 
     computed: {
-        users () {
-            return  this.$store.state.users
-        }
+        ...Vuex.mapGetters([
+            'FilterUsers'
+        ])
     },
     mounted () {
         this.$store.dispatch ('loadUsers')

@@ -60,7 +60,13 @@ export default new Vuex.Store(
           }
           users = usersRefresh
           return users 
-       }
+        }else{
+          for (const user of users){
+              usersRefresh.push(user)
+          }
+          users = usersRefresh
+          return users
+        }
       },
       ConsultedUsers (state) {
         let users = state.users;

@@ -1,7 +1,7 @@
 <template>
 
     <div class="card-columns">
-        <userItem v-for="user of users" :user="user" :key="user.id"></userItem>  
+        <userItem v-for="user of FilterUsers" :user="user" :key="user.id"></userItem>  
     </div>
     
 </template>

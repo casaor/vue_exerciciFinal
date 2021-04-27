@@ -12,7 +12,12 @@
       <div class="card-body">
         <ul>
           <li v-for="item of ConsultedUsers" :ConsultedUsers="item" :key="item.id">
-            {{item.name}}: {{item.consulted}}
+            <div>
+              {{item.name}}:
+            </div>
+            <div> 
+              {{item.consulted}}
+            </div>
           </li>
         </ul>
       </div>
@@ -22,7 +27,12 @@
       <div class="card-body">
         <ul>
           <li v-for="photo of ConsultedPhotos" :key="photo.albumId">
-            {{photo.title}} - {{photo.consulted}}
+            <div>
+              Photo {{photo.albumId}}:
+            </div>
+            <div>
+              {{photo.consulted}}
+            </div>
           </li>
         </ul>
       </div>
