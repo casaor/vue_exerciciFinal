@@ -7,9 +7,6 @@ export default {
             return  this.$store.state.photos
         }
     },
-    mounted () {
-        this.$store.dispatch ('loadPhotos')
-    },
     components:
     {
         PictureItem

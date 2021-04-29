@@ -8,9 +8,6 @@ export default {
             'FilterUsers'
         ])
     },
-    mounted () {
-        this.$store.dispatch ('loadUsers')
-    },
     components:
     {
         UserItem
