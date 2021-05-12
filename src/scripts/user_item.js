@@ -1,3 +1,5 @@
+import store from './../store/index'
+
 export default {
     data ()
     {
@@ -10,18 +12,18 @@ export default {
         }
     },
     methods:{
-        UserInfo(userId){
+        UserInfo(user){
             this.$router.push(
                 {
                     name: 'users1',
                     params:
                     {
-                        Pid: userId,
+                        Pid: user.id,
                         users: this.user
                     }
                 }
             );
-            this.user.consulted = this.user.consulted + 1;
+            store.commit('SetUserVisited', user)
         }
     },
     filters:

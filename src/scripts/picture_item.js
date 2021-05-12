@@ -1,3 +1,5 @@
+import store from './../store/index'
+
 export default {
     data ()
     {
@@ -10,18 +12,18 @@ export default {
         }
     },
     methods:{
-        PhotoInfo(albumId){
+        PhotoInfo(photo){
             this.$router.push(
                 {
                     name: 'photo',
                     params:
                     {
-                        Qid: albumId,
+                        Qid: photo.albumId,
                         photos: this.photo
                     }
                 }
             );
-            this.photo.consulted = this.photo.consulted + 1;
+            store.commit('SetPhotoVisited', photo)
         }
     },
 }

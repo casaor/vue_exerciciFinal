@@ -18,7 +18,6 @@ export default new Vuex.Store(
     mutations: {
       setSearch (state,search){
         state.filters.search = search
-        // console.log(state.filters.search)
       },
       setUsers (state,users) {
         state.users = users
@@ -31,7 +30,25 @@ export default new Vuex.Store(
         photos.forEach(function (item) {
           item.consulted = 0;
         })
-      }
+      },
+      SetUserVisited (state, userVisited) {
+        var usersRefresh = [];
+        usersRefresh = state.users
+        for (let user of state.users){
+          if (user == userVisited) {
+            user.consulted ++
+          }
+        } state.users = usersRefresh
+      },
+      SetPhotoVisited (state, photoVisited) {
+        var photosRefresh = [];
+        photosRefresh = state.photos
+        for (let photo of photosRefresh){
+          if (photo == photoVisited) {
+            photo.consulted ++
+          }
+        } state.photos = photosRefresh
+      },
     },
     actions: {
 
@@ -76,7 +93,7 @@ export default new Vuex.Store(
               uconsulted.push(user)
           }
         }
-          return uconsulted 
+          return uconsulted
       },
       ConsultedPhotos (state) {
         let photos = state.photos;

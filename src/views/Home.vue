@@ -26,7 +26,7 @@
       <div class="card-header">Pictures consulted</div>
       <div class="card-body">
         <ul>
-          <li v-for="photo of ConsultedPhotos" :key="photo.albumId">
+          <li v-for="photo of ConsultedPhotos" :ConsultedPhotos="photo" :key="photo.albumId">
             <div>
               Photo {{photo.albumId}}:
             </div>
