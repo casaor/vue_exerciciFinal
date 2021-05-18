@@ -93,24 +93,26 @@ export default new Vuex.Store(
         let users = state.users;
         let uconsulted = []
         if (state.available || !state.available){
-          for (const user of users){ //con filter
-            if (user.consulted > 0){
-                uconsulted.push(user)
-            }
-          }
-            return uconsulted
+          uconsulted = users.filter((user) => user.consulted > 0)   
+          // for (const user of users){ 
+          //   if (user.consulted > 0){
+          //       uconsulted.push(user)
+          //   }
+          // }
+          return uconsulted
         }
       },
       ConsultedPhotos (state) {
         let photos = state.photos;
         let pconsulted = []
         if (state.available || !state.available){
-          for (const photo of photos){
-            if (photo.consulted > 0){
-                pconsulted.push(photo)
-            }
-          }
-            return pconsulted 
+          pconsulted = photos.filter((photo) => photo.consulted > 0)
+          // for (const photo of photos){
+          //   if (photo.consulted > 0){
+          //       pconsulted.push(photo)
+          //   }
+          // }
+          return pconsulted 
         }
       }
     }
