@@ -13,7 +13,8 @@ export default new Vuex.Store(
       photos: [],
       filters: {
         search: ''
-      } 
+      },
+      available: false 
     },
     mutations: {
       setSearch (state,search){
@@ -49,6 +50,9 @@ export default new Vuex.Store(
           }
         } state.photos = photosRefresh
       },
+      SetAvailable (state){
+        state.available = !state.available
+      }
     },
     actions: {
 
@@ -88,22 +92,26 @@ export default new Vuex.Store(
       ConsultedUsers (state) {
         let users = state.users;
         let uconsulted = []
-        for (const user of users){
-          if (user.consulted > 0){
-              uconsulted.push(user)
+        if (state.available || !state.available){
+          for (const user of users){ //con filter
+            if (user.consulted > 0){
+                uconsulted.push(user)
+            }
           }
+            return uconsulted
         }
-          return uconsulted
       },
       ConsultedPhotos (state) {
         let photos = state.photos;
         let pconsulted = []
-        for (const photo of photos){
-          if (photo.consulted > 0){
-              pconsulted.push(photo)
+        if (state.available || !state.available){
+          for (const photo of photos){
+            if (photo.consulted > 0){
+                pconsulted.push(photo)
+            }
           }
+            return pconsulted 
         }
-          return pconsulted 
       }
     }
   });

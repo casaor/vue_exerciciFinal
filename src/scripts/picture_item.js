@@ -24,6 +24,9 @@ export default {
                 }
             );
             store.commit('SetPhotoVisited', photo)
+            this.$nextTick(()=>{
+                this.$store.commit('SetAvailable', true)
+            })
         }
     },
 }

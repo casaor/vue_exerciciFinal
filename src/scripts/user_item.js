@@ -24,6 +24,9 @@ export default {
                 }
             );
             store.commit('SetUserVisited', user)
+            this.$nextTick(()=>{
+                this.$store.commit('SetAvailable', true)
+            })
         }
     },
     filters:

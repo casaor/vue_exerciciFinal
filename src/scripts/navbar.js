@@ -9,7 +9,7 @@ export default {
         return store.state.filters.search
       },
       set(value){
-        store.commit('SetSearch',value)
+        store.commit('setSearch',value)
       }
     }
   }

@@ -28,7 +28,7 @@
         <ul>
           <li v-for="photo of ConsultedPhotos" :ConsultedPhotos="photo" :key="photo.albumId">
             <div>
-              Photo {{photo.albumId}}:
+              Photo {{photo.id}}:
             </div>
             <div>
               {{photo.consulted}}
